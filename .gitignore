@@ -1,21 +1,2 @@
-# Ignore node_modules directory
-node_modules/
-
-# Ignore log files
-*.log
-
-# Ignore compiled files
-*.class
-*.pyc
-
-# Ignore system files
-.DS_Store
-Thumbs.db
-
-# Ignore environment files
-.env
-
 # Ignore Bootstrap files (example)
 bootstrap-5.3.3-dist
-
-bootstrap-icons-1.11.3
