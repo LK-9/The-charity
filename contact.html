@@ -15,20 +15,21 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
     <header>
       <div class="top-bar">
         <div class="container">
-          <div class="row top-row">
-            <div class="col-md-10 top-left">
+          <div class="row top-row align-items-center">
+            <div class="col-12 col-md-10 top-left">
               <p class="top-mail">
-                MAIL:<a href="#">contact@ourcharity.com</a>
+                MAIL:<a href="mailto:contact@ourcharity.com">contact@ourcharity.com</a>
               </p>
               <p>PHONE: +24 3772 120 091 / +56452 4567</p>
             </div>
-            <div class="col-md-2">
+            <div class="col-12 col-md-2 top-btn-col">
               <button class="top-btn">Donate Now</button>
             </div>
           </div>
@@ -37,41 +38,63 @@
 
       <nav>
         <div class="container">
-          <div class="row">
-            <div class="col-12 nav-contents">
-              <div>
-                <a href="#">
-                  <img
-                    src="Images/logo.png.webp"
-                    alt="LOGO"
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-              <div>
-                <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About us</a></li>
-                  <li><a href="causes.html">Causes</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
+          <div class="nav-contents">
+            <div class="nav-logo">
+              <a href="index.html">
+                <img
+                  src="Images/logo.png.webp"
+                  alt="LOGO"
+                  class="img-fluid"
+                />
+              </a>
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              fill="currentColor"
-              viewBox="0 0 16 16"
+
+            <button
+              class="menu-toggle"
               id="menu"
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="nav-menu"
             >
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="icon-hamburger"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="icon-close"
+                style="display: none;"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">News</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -419,5 +442,6 @@
       defer
     ></script>
     <script src="./contact.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

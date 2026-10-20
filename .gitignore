@@ -1,2 +1,7 @@
 # Ignore Bootstrap files (example)
 bootstrap-5.3.3-dist
+
+# Environment variables
+.env
+.env.local
+.env.*.local

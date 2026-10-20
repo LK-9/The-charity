@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,20 +18,23 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="top-bar">
         <div class="container">
-          <div class="row top-row">
-            <div class="col-md-10 top-left">
+          <div class="row top-row align-items-center">
+            <div class="col-12 col-md-10 top-left">
               <p class="top-mail">
-                MAIL:<a href="#">contact@ourcharity.com</a>
+                MAIL:<a href="mailto:contact@ourcharity.com"
+                  >contact@ourcharity.com</a
+                >
               </p>
               <p>PHONE: +24 3772 120 091 / +56452 4567</p>
             </div>
-            <div class="col-md-2">
+            <div class="col-12 col-md-2 top-btn-col">
               <button class="top-btn">Donate Now</button>
             </div>
           </div>
@@ -37,41 +43,59 @@
 
       <nav>
         <div class="container">
-          <div class="row">
-            <div class="col-12 nav-contents">
-              <div>
-                <a href="#">
-                  <img
-                    src="Images/logo.png.webp"
-                    alt="LOGO"
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-              <div>
-                <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About us</a></li>
-                  <li><a href="causes.html">Causes</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
+          <div class="nav-contents">
+            <div class="nav-logo">
+              <a href="index.html">
+                <img src="Images/logo.png.webp" alt="LOGO" class="img-fluid" />
+              </a>
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              fill="currentColor"
-              viewBox="0 0 16 16"
+
+            <button
+              class="menu-toggle"
               id="menu"
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="nav-menu"
             >
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="icon-hamburger"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                class="icon-close"
+                style="display: none"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+              <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -93,9 +117,17 @@
                 sodales odio, id tempus ullamcorper
               </p>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 hero-btns">
               <button id="db">Donate Now</button>
               <button id="rmb">Read More</button>
+              <a
+                href="https://t.me/The_Charity_Bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                id="rmb"
+                style="text-decoration: none"
+                >Open Mini App</a
+              >
             </div>
           </div>
         </div>
@@ -105,60 +137,52 @@
     <!-- SECOND SECTION  -->
     <section class="second">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="sec-box-active">
               <img
                 src="Images/hands.png.webp"
-                width="50px"
-                height="60px"
+                width="50"
+                height="60"
                 alt="hands"
                 class="img-fluid"
               />
               <h3>Become a Volunteer</h3>
               <p>
-                Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit.
-                Mauris <br />tempus vestib ulum mauris quis <br />aliquam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                tempus vestibulum mauris quis aliquam.
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="sec-box">
               <img
                 src="Images/donation-gray.png.webp"
-                width="60px"
-                height="60px"
+                width="60"
+                height="60"
                 alt="donation"
                 class="img-fluid"
               />
-              <img
-                src="Images/donation-gray.png.webp"
-                width="60px"
-                height="60px"
-                alt="donation"
-                class="img-fluid image-2"
-                style="display: none;"
-              />
               <h3>Dance & Music</h3>
               <p>
-                Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit.
-                Mauris <br />tempus vestib ulum mauris quis <br />aliquam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                tempus vestibulum mauris quis aliquam.
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="sec-box">
               <img
                 src="Images/love-gray.png"
-                width="60px"
-                height="60px"
+                width="60"
+                height="60"
                 alt="love"
                 class="img-fluid"
               />
               <h3>Online Confrence</h3>
               <p>
-                Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit.
-                Mauris <br />tempus vestib ulum mauris quis <br />aliquam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                tempus vestibulum mauris quis aliquam.
               </p>
             </div>
           </div>
@@ -335,7 +359,7 @@
                   </div>
                   <div class="col-md">
                     <div class="bar-filler">
-                      <div class="tip-wrap" style="display: inline">
+                      <div class="tip-wrap" style="left: 83%">
                         <span class="tip">83%</span>
                       </div>
                       <span class="fill" data-percentage="83"></span>
@@ -381,7 +405,7 @@
                         Mauris tempus vestib <br />ulum mauris.
                       </p>
                       <div class="bar-filler">
-                        <div class="tip-wrap" style="display: inline">
+                        <div class="tip-wrap" style="left: 83%">
                           <span class="tip">83%</span>
                         </div>
                         <span class="fill" data-percentage="83"></span>
@@ -409,7 +433,7 @@
                         Mauris tempus vestib <br />ulum mauris.
                       </p>
                       <div class="bar-filler">
-                        <div class="tip-wrap" style="display: inline">
+                        <div class="tip-wrap" style="left: 83%">
                           <span class="tip">83%</span>
                         </div>
                         <span class="fill" data-percentage="83"></span>
@@ -439,7 +463,7 @@
                         Mauris tempus vestib <br />ulum mauris.
                       </p>
                       <div class="bar-filler">
-                        <div class="tip-wrap" style="display: inline">
+                        <div class="tip-wrap" style="left: 83%">
                           <span class="tip">83%</span>
                         </div>
                         <span class="fill" data-percentage="83"></span>
@@ -479,25 +503,37 @@
               </div>
             </div>
             <div class="col-md-6 counter-box">
-              <div class="container">
+              <div class="container p-0">
                 <div class="row">
-                  <div class="col-md-4">
-                    <img src="Images/teamwork.png.webp" alt="" />
+                  <div class="col-4 col-md-4 counter-item">
+                    <img
+                      src="Images/teamwork.png.webp"
+                      alt="Children helped"
+                      class="counter-icon"
+                    />
                     <div class="counter-text">
                       <h1>120</h1>
                       <span id="counter-k">K</span>
                     </div>
                     <p>Children helped</p>
                   </div>
-                  <div class="col-md-4">
-                    <img src="Images/collect.png" alt="" />
+                  <div class="col-4 col-md-4 counter-item">
+                    <img
+                      src="Images/collect.png"
+                      alt="Water wells"
+                      class="counter-icon"
+                    />
                     <div class="counter-text">
                       <h1>79</h1>
                     </div>
                     <p>Water wells</p>
                   </div>
-                  <div class="col-md-4">
-                    <img src="Images/dove.png.webp" alt="" />
+                  <div class="col-4 col-md-4 counter-item">
+                    <img
+                      src="Images/dove.png.webp"
+                      alt="Volunteers"
+                      class="counter-icon"
+                    />
                     <div class="counter-text">
                       <h1>253</h1>
                     </div>
@@ -738,6 +774,15 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      if (window.Telegram && window.Telegram.WebApp) {
+        const tg = window.Telegram.WebApp;
+
+        tg.ready();
+        tg.expand();
+      }
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
